@@ -284,7 +284,7 @@ def app3():
     st.title("Confusion Matrix")
     fig = plt.figure(figsize=(5, 5))
     sns.heatmap(confusion_matrix(y_test,y_test_hat),annot=True,fmt="d")
-    st.pyplot(fig)
+    st.pyplot(fig, figsize=(5,5))
     #img = Image.open('Images/confusion matrix.png')
     #st.image(img, width = 600)
 
