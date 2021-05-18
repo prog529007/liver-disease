@@ -280,12 +280,13 @@ def app3():
         st.write("You have Liver Disease.")
     else:
         st.write("You do not have Liver Disease.")
-    #fig, ax = plt.subplots(figsize=(15, 15))
-    #sns.heatmap(confusion_matrix(y_test,y_test_hat),annot=True,fmt="d")
-    #st.pyplot(fig)
+    
     st.title("Confusion Matrix")
-    img = Image.open('Images/confusion matrix.png')
-    st.image(img, width = 600)
+    fig, ax = plt.subplots(figsize=(10, 10))
+    sns.heatmap(confusion_matrix(y_test,y_test_hat),annot=True,fmt="d")
+    st.pyplot(fig)
+    #img = Image.open('Images/confusion matrix.png')
+    #st.image(img, width = 600)
 
     st.title("AUC Score:")
     score = roc_auc_score(y_test, y_test_hat)
