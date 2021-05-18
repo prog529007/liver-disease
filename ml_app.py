@@ -26,7 +26,7 @@ def app0():
     st.write("A healthy liver is a basic requirement for the overall health and wellness of an individual.")
     st.write("Presence of Liver Disease has a significant impact on the health of a person as the liver is responsible for over 500 functions in the body and is often referred to as the metabolic factory of our body.")
     st.write("It is therefore of immense use to have an app which is able to detect whether or not a person has a healthy liver or not. Furthermore, if there is an app which can predict the same without the need of a clinician at the initial assessment, it will be of great utility.")
-    img = Image.open('/Users/abhisheksaigal/Desktop/liver image 2.jpg')
+    img = Image.open('Images/liver image 2.png')
     st.image(img, caption='A healthy Liver', width = 450)
     st.title("LIVER DISEASES")
     st.markdown('<p class="big-font">TYPES OF LIVER DISEASES:</p>', unsafe_allow_html=True)
@@ -37,7 +37,7 @@ def app0():
         #st.write("These Diseases can be caused by a variety of factors such as:")
         #st.write("1. Hepatitis Viruses (A, B, C and E)\n2. Alcohol\n3. Matabolic causes\n4. Immune System Abnormalities\n5. Genetics\n6. Cancer\n7. Hepatotoxic Drugs")
     with column_2:
-        st.image('/Users/abhisheksaigal/Desktop/l2.jpg', use_column_width=True)
+        st.image('Images/l2.jpg', use_column_width=True)
 
     st.markdown('<p class="big-font">CAUSES OF LIVER DISEASES:</p>', unsafe_allow_html=True)
     st.write("These Diseases can be caused by a variety of factors such as:")
@@ -45,7 +45,7 @@ def app0():
     with column_3:
         st.write("1. Hepatitis Viruses (A, B, C and E)\n2. Alcohol\n3. Matabolic causes\n4. Immune System Abnormalities\n5. Genetics\n6. Cancer\n7. Hepatotoxic Drugs")
     with column_4:
-        st.image('/Users/abhisheksaigal/Desktop/computers project/Chemistry notes/Screen Shot 2021-05-16 at 11.11.48 PM.png', use_column_width=True)
+        st.image('Images/Screen Shot 2021-05-16 at 11.11.48 PM.png', use_column_width=True)
     st.title("OBJECTIVES")
     st.write("1. To gain an understanding of Liver Diseases and the main factors causing them.\n2. To analyse the data and find out which features are most important in detecting Liver Disease.\n3. To develop a Liver Disease Prediction machine learning model which is able to perform at a relatively high accuracy (85-90%).")
 
@@ -66,11 +66,11 @@ def app1():
     #fig, ax = plt.subplots(figsize=(5, 2))
     #sns.distplot(liver['Aspartate_Aminotransferase'])
     #st.pyplot(fig)
-    img = Image.open('/Users/abhisheksaigal/Downloads/merge_from_ofoct (1).jpg')
+    img = Image.open('Images/merge_from_ofoct (1).jpg')
     st.image(img, use_column_width = True)
-    img = Image.open('/Users/abhisheksaigal/Downloads/merge_from_ofoct (3).jpg')
+    img = Image.open('Images/merge_from_ofoct (3).jpg')
     st.image(img, use_column_width = True)
-    img = Image.open('/Users/abhisheksaigal/Downloads/merge_from_ofoct (5).jpg')
+    img = Image.open('Images/merge_from_ofoct (5).jpg')
     st.image(img, use_column_width = True)
 
 
@@ -83,14 +83,14 @@ def app2():
     #fig, ax = plt.subplots(figsize=(15,15))
     #sns.heatmap(cormap, cmap = "Greens", annot = True)
     #st.pyplot(fig)
-    img = Image.open('/Users/abhisheksaigal/Desktop/new_heatmap.png')
+    img = Image.open('Images/new_heatmap.png')
     st.image(img, use_column_width = True)
 
     st.title("Further Analysis:")
     #sns.set()
     #fig2 = sns.pairplot(liver, hue='Dataset', kind='reg')
     #st.pyplot(fig2)
-    img = Image.open('/Users/abhisheksaigal/Desktop/liver graphs.png')
+    img = Image.open('Images/liver graphs.png')
     st.image(img, use_column_width = True)
 
     st.title("Highly Correlated Features")
@@ -103,9 +103,9 @@ def app2():
     #sns.set()
     #fig = sns.jointplot("Direct_Bilirubin", "Total_Bilirubin", data=liver, kind="reg")
     #st.pyplot(fig)
-    img = Image.open('/Users/abhisheksaigal/Downloads/corr_merge.jpg')
+    img = Image.open('Images/corr_merge.jpg')
     st.image(img, width = 900)
-    img = Image.open('/Users/abhisheksaigal/Downloads/merge_from_ofoct (7).jpg')
+    img = Image.open('Images/merge_from_ofoct (7).jpg')
     st.image(img, width = 900)
 
 def app3():
@@ -284,7 +284,7 @@ def app3():
     #sns.heatmap(confusion_matrix(y_test,y_test_hat),annot=True,fmt="d")
     #st.pyplot(fig)
     st.title("Confusion Matrix")
-    img = Image.open('/Users/abhisheksaigal/Desktop/confusion matrix.png')
+    img = Image.open('Images/confusion matrix.png')
     st.image(img, width = 600)
 
     st.title("AUC Score:")
@@ -296,7 +296,7 @@ def app3():
     import base64
     st.title('Visualisation of the Extra Trees Classifier')
     st.write("The Extremely Randomized Trees Classifier aggregates the results of multiple de-correlated decision trees collected in a “forest” to output it’s classification result. Its visualisation can be seen below")
-    file_ = open("/Users/abhisheksaigal/Desktop/randomforest.gif", "rb")
+    file_ = open("Images/randomforest.gif", "rb")
     contents = file_.read()
     data_url = base64.b64encode(contents).decode("utf-8")
     file_.close()
