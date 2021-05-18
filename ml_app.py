@@ -2,7 +2,7 @@ from app import MultiApp
 from PIL import Image
 import numpy as np 
 import pandas as pd
-from sklearn.metrics import accuracy_score, plot_confusion_matrix
+from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import seaborn as sns
@@ -21,7 +21,8 @@ def app0():
     }
     </style>
     """, unsafe_allow_html=True)
-    st.title("LIVER HEALTH DETECTION APP")
+    st.title("LIVER HEALTH DETECTION")
+    st.subheader("By Abhishek Saigal")
     st.title("INTRODUCTION")
     st.write("A healthy liver is a basic requirement for the overall health and wellness of an individual.")
     st.write("Presence of Liver Disease has a significant impact on the health of a person as the liver is responsible for over 500 functions in the body and is often referred to as the metabolic factory of our body.")
@@ -282,8 +283,10 @@ def app3():
         st.write("You do not have Liver Disease.")
     
     st.title("Confusion Matrix")
-    plot_confusion_matrix(model, y_test, y_test_hat)
-    st.pyplot()
+    cm=confusion_matrix(y_test, y_test_hat)
+    st.write('Confusion matrix: ', cm)
+    #plot_confusion_matrix(model, y_test, y_test_hat)
+    #st.pyplot()
     #img = Image.open('Images/confusion matrix.png')
     #st.image(img, width = 600)
 
