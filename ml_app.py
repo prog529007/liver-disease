@@ -282,10 +282,9 @@ def app3():
         st.write("You do not have Liver Disease.")
     
     st.title("Confusion Matrix")
-    fig, ax = plt.subplots(figsize=(10, 10))
+    fig = plt.figure(figsize=(5, 5))
     sns.heatmap(confusion_matrix(y_test,y_test_hat),annot=True,fmt="d")
     st.pyplot(fig)
-    fig.update_layout(width = 500)
     #img = Image.open('Images/confusion matrix.png')
     #st.image(img, width = 600)
 
