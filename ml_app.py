@@ -75,7 +75,7 @@ def app1():
 
 
 def app2():
-    liver = pd.read_csv('/Users/abhisheksaigal/Downloads/indian_liver_patient.csv')
+    liver = pd.read_csv('indian_liver_patient.csv')
     st.title('EXPLORATORY DATA ANALYSIS')
     st.title("Correlation Heatmap")
     st.write("By analysing a heatmap we can see the correlation between all the features in the dataset.")
@@ -110,7 +110,7 @@ def app2():
 
 def app3():
     st.title("LIVER DISEASE PREDICTION")
-    liver = pd.read_csv('/Users/abhisheksaigal/Downloads/indian_liver_patient.csv')
+    liver = pd.read_csv('indian_liver_patient.csv')
     liver.columns = liver.columns.map(str.lower)     
     liver.albumin_and_globulin_ratio.fillna(liver.albumin_and_globulin_ratio.mean(), inplace=True) 
     #liver.drop(['direct_bilirubin', 'aspartate_aminotransferase', 'albumin'], axis=1, inplace=True)
