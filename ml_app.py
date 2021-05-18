@@ -57,7 +57,7 @@ def app1():
     st.write("The features present in this dataset were:")
     st.write("1. Age of the Patient\n2. Gender of the Patient\n3. Total Bilirubin\n4. Direct Bilirubin\n5. Alkaline Phosphotase\n6. Alamine Aminotransferase\n7. Aspartate Aminotransferase\n8. Total Proteins\n9. Albumin\n10. Albumin and Globulin Ratio")
     st.write("Each entry also has a label \"Dataset\" to split the data into persons with liver disease and those without liver disease.")
-    liver = pd.read_csv('/Users/abhisheksaigal/Downloads/indian_liver_patient.csv')
+    liver = open('indian_liver_patient.csv')
     st.subheader('INDIAN LIVER PATIENTS DATASET:')
     st.dataframe(liver)
     st.subheader("KEY STATISTICS ABOUT THE DATASET")
