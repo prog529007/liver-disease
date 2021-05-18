@@ -282,7 +282,7 @@ def app3():
         st.write("You do not have Liver Disease.")
     
     st.title("Confusion Matrix")
-    plot_confusion_matrix(model, y_test, y_test_hat, display_labels=[1,2])
+    plot_confusion_matrix(model, y_test, y_test_hat)
     st.pyplot()
     #img = Image.open('Images/confusion matrix.png')
     #st.image(img, width = 600)
