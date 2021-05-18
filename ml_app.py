@@ -26,7 +26,7 @@ def app0():
     st.write("A healthy liver is a basic requirement for the overall health and wellness of an individual.")
     st.write("Presence of Liver Disease has a significant impact on the health of a person as the liver is responsible for over 500 functions in the body and is often referred to as the metabolic factory of our body.")
     st.write("It is therefore of immense use to have an app which is able to detect whether or not a person has a healthy liver or not. Furthermore, if there is an app which can predict the same without the need of a clinician at the initial assessment, it will be of great utility.")
-    img = Image.open('Images/liver image 2.png')
+    img = Image.open('Images/liver image 2.jpg')
     st.image(img, caption='A healthy Liver', width = 450)
     st.title("LIVER DISEASES")
     st.markdown('<p class="big-font">TYPES OF LIVER DISEASES:</p>', unsafe_allow_html=True)
