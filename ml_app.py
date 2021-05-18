@@ -22,7 +22,7 @@ def app0():
     </style>
     """, unsafe_allow_html=True)
     st.title("LIVER HEALTH DETECTION")
-    st.subheader("By Abhishek Saigal")
+    st.write("By Abhishek Saigal")
     st.title("INTRODUCTION")
     st.write("A healthy liver is a basic requirement for the overall health and wellness of an individual.")
     st.write("Presence of Liver Disease has a significant impact on the health of a person as the liver is responsible for over 500 functions in the body and is often referred to as the metabolic factory of our body.")
@@ -284,7 +284,7 @@ def app3():
     
     st.title("Confusion Matrix")
     cm=confusion_matrix(y_test, y_test_hat)
-    st.write('Confusion matrix: ', cm)
+    st.write(cm)
     #plot_confusion_matrix(model, y_test, y_test_hat)
     #st.pyplot()
     #img = Image.open('Images/confusion matrix.png')
