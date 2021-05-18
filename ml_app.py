@@ -282,8 +282,8 @@ def app3():
         st.write("You do not have Liver Disease.")
     
     st.title("Confusion Matrix")
-    plt.rcParams.update({'font.size': 4})
-    fig = plt.figure(figsize=(5, 5))
+    plt.rcParams.update({'font.size': 8})
+    fig, ax = plt.subplots(figsize=(5, 5))
     sns.heatmap(confusion_matrix(y_test,y_test_hat),annot=True,fmt="d")
     st.pyplot(fig, figsize=(5,5))
     #img = Image.open('Images/confusion matrix.png')
