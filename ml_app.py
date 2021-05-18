@@ -282,6 +282,7 @@ def app3():
         st.write("You do not have Liver Disease.")
     
     st.title("Confusion Matrix")
+    plt.rcParams.update({'font.size': 4})
     fig = plt.figure(figsize=(5, 5))
     sns.heatmap(confusion_matrix(y_test,y_test_hat),annot=True,fmt="d")
     st.pyplot(fig, figsize=(5,5))
@@ -291,8 +292,6 @@ def app3():
     st.title("AUC Score:")
     score = roc_auc_score(y_test, y_test_hat)
     st.write(score)
-
-    st.title("Visualising Performance")
     
     import base64
     st.title('Visualisation of the Extra Trees Classifier')
