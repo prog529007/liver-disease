@@ -44,7 +44,7 @@ def app0():
     st.write("These Diseases can be caused by a variety of factors such as:")
     column_3, column_4, column_5 = st.beta_columns([9,6,4])
     with column_3:
-        st.write("1. Hepatitis Viruses (A, B, C and E)\n2. Alcohol\n3. Matabolic causes\n4. Immune System Abnormalities\n5. Genetics\n6. Cancer\n7. Hepatotoxic Drugs")
+        st.write("1. Hepatitis Viruses (A, B, C and E)\n2. Alcohol\n3. Metabolic causes\n4. Immune System Abnormalities\n5. Genetics\n6. Cancer\n7. Hepatotoxic Drugs")
     with column_4:
         st.image('Images/Screen Shot 2021-05-16 at 11.11.48 PM.png', use_column_width=True)
     st.title("OBJECTIVES")
