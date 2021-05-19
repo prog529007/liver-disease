@@ -308,8 +308,8 @@ def app3():
 
 def app5():
     st.title("CONCLUSIONS")
-    st.write("1. By using an appropriate methodology, standard Liver Function Tests (LFTs) can be used to predict whether a person has a healthy or a diseased liver with 85-90 percent accuracy")
-    st.write("2. The ExtraTrees Classifier is an effective machine learning model for analysis of Medical Datasets such as Liver Function Tests.")
+    st.write("1. By using an appropriate methodology, standard Liver Function Tests (LFTs) can be used to predict whether a person has a healthy or a diseased liver with 85-90 percent accuracy.")
+    st.write("2. The Extra Trees Classifier is an effective machine learning model for analysis of Medical Datasets such as Liver Function Tests.")
 
 st.sidebar.title("PAGE NAVIGATION")
 app.add_app("Home Page", app0)
