@@ -26,7 +26,7 @@ def app0():
     st.title("INTRODUCTION")
     st.write("A healthy liver is a basic requirement for the overall health and wellness of an individual.")
     st.write("Presence of Liver Disease has a significant impact on the health of a person as the liver is responsible for over 500 functions in the body and is often referred to as the metabolic factory of our body.")
-    st.write("It is therefore of immense use to have an app which is able to detect whether or not a person has a healthy liver or not. Furthermore, if there is an app which can predict the same without the need of a clinician at the initial assessment, it will be of great utility.")
+    st.write("It is therefore of immense use to have an app which is able to detect whether or not a person has a healthy liver. Furthermore, if there is an app which can predict the same without the need of a clinician at the initial assessment, it will be of great utility.")
     img = Image.open('Images/liver image 2.jpg')
     st.image(img, caption='A healthy Liver', width = 450)
     st.title("LIVER DISEASES")
@@ -34,17 +34,17 @@ def app0():
     st.write("An unhealthy liver can be the sequel of several liver diseases stemming from various causes. Some of the common liver diseases are:")
     column_1, column_2 = st.beta_columns([3,5])
     with column_1:
-        st.write("1. Acute Viral Hepatitis\n2. Chronic Viral Hepatitis\n3. Cirrhosis\n4. Alcoholic Liver Disease\n 5. Non-Alcoholic Fatty Liver Disease\n 6. Autoimmune Liver Disease\n7. Drug-induced Liver Disease\n8. Cholastatic Liver Disease\n9. Genetic and Metabolic Liver Diseases\n10. Liver Cancer\n")
+        st.write("1. Acute Viral Hepatitis\n2. Chronic Viral Hepatitis\n3. Cirrhosis\n4. Alcoholic Liver Disease\n 5. Non-Alcoholic Fatty Liver Disease\n 6. Autoimmune Liver Disease\n7. Drug-induced Liver Disease\n8. Cholestatic Liver Disease\n9. Genetic and Metabolic Liver Diseases\n10. Liver Cancer\n")
         #st.write("These Diseases can be caused by a variety of factors such as:")
         #st.write("1. Hepatitis Viruses (A, B, C and E)\n2. Alcohol\n3. Matabolic causes\n4. Immune System Abnormalities\n5. Genetics\n6. Cancer\n7. Hepatotoxic Drugs")
     with column_2:
         st.image('Images/l2.jpg', use_column_width=True)
 
     st.markdown('<p class="big-font">CAUSES OF LIVER DISEASES:</p>', unsafe_allow_html=True)
-    st.write("These Diseases can be caused by a variety of factors such as:")
+    st.write("These Liver Diseases can be caused by a variety of factors such as:")
     column_3, column_4, column_5 = st.beta_columns([9,6,4])
     with column_3:
-        st.write("1. Hepatitis Viruses (A, B, C and E)\n2. Alcohol\n3. Metabolic causes\n4. Immune System Abnormalities\n5. Genetics\n6. Cancer\n7. Hepatotoxic Drugs")
+        st.write("1. Hepatitis Viruses (A, B, C and E)\n2. Alcohol\n3. Metabolic causes\n4. Immune System Abnormalities\n5. Genetic Abnormalities\n6. Cancer\n7. Hepatotoxic Drugs")
     with column_4:
         st.image('Images/Screen Shot 2021-05-16 at 11.11.48 PM.png', use_column_width=True)
     st.title("OBJECTIVES")
@@ -54,9 +54,9 @@ def app0():
 def app1():
     st.title("THE DATASET")
     st.write("The Indian Liver Patient Records Dataset has patient records from North East Andhra Pradesh, India.")
-    st.write("This dataset consists of 583 total records, with 416 liver patient Records and 167 non-liver patient records.")
+    st.write("This dataset consists of 583 total records, with 416 liver patient records and 167 non-liver patient records.")
     st.write("The features present in this dataset were:")
-    st.write("1. Age of the Patient\n2. Gender of the Patient\n3. Total Bilirubin\n4. Direct Bilirubin\n5. Alkaline Phosphotase\n6. Alamine Aminotransferase\n7. Aspartate Aminotransferase\n8. Total Proteins\n9. Albumin\n10. Albumin and Globulin Ratio")
+    st.write("1. Age of the Patient\n2. Gender of the Patient\n3. Total Bilirubin\n4. Direct Bilirubin\n5. Alkaline Phosphotase\n6. Alanine Aminotransferase\n7. Aspartate Aminotransferase\n8. Total Proteins\n9. Albumin\n10. Albumin and Globulin Ratio")
     st.write("Each entry also has a label \"Dataset\" to split the data into persons with liver disease and those without liver disease.")
     liver = pd.read_csv('indian_liver_patient.csv')
     st.subheader('INDIAN LIVER PATIENTS DATASET:')
@@ -97,7 +97,7 @@ def app2():
     st.title("Highly Correlated Features")
     st.write("From these 2 plots, we have found 4 pairs of highly correlated features:")
     st.write("1. Direct Bilirubin and Total Bilirubin")
-    st.write("2. Aspartate_Aminotransferase and Alamine_Aminotransferase")
+    st.write("2. Aspartate_Aminotransferase and Alanine_Aminotransferase")
     st.write("3. Total Proteins and Albumin")
     st.write("4. Albumin and Albumin and Globulin Ratio")
     st.title("Visualisation of correlated features:")
@@ -199,10 +199,10 @@ def app3():
         alamine_amonotransferase = -1
         col_1, col_2 = st.beta_columns([5,1])
         with col_1:
-            alamine_aminotransferase = st.slider('Alamine Aminotransferase', 20, 250, 100)
+            alamine_aminotransferase = st.slider('Alanine Aminotransferase', 20, 250, 100)
         with col_2:
             bili = 0
-            s_bili = st.text_input("Alamine Aminotransferase", "")
+            s_bili = st.text_input("Alanine Aminotransferase", "")
             if(len(s_bili) != 0):
                 bili = float(s_bili)
             if (bili != 0):
@@ -256,7 +256,7 @@ def app3():
             if (bili != 0):
                 albumin_and_globulin_ratio = bili
         #st.write(albumin_and_globulin_ratio*2)
-        user_data = {'age': age, 'gender':gender, 'total bilirubin':total_bilirubin, 'direct bilirubin':direct_bilirubin, 'alkaline phosphotase':alkaline_phosphotase, 'amaline aminotransferase':alamine_aminotransferase, 'aspartate aminotransferase':aspartate_aminotransferase, 'total proteins':total_proteins, 'albumin':albumin, 'albumin and globulin ratio':albumin_and_globulin_ratio}
+        user_data = {'age': age, 'gender':gender, 'total bilirubin':total_bilirubin, 'direct bilirubin':direct_bilirubin, 'alkaline phosphotase':alkaline_phosphotase, 'alanine aminotransferase':alamine_aminotransferase, 'aspartate aminotransferase':aspartate_aminotransferase, 'total proteins':total_proteins, 'albumin':albumin, 'albumin and globulin ratio':albumin_and_globulin_ratio}
     
         features = pd.DataFrame(user_data, index=[0])
         return features
