@@ -296,7 +296,7 @@ def app3():
     
     import base64
     st.title('Visualisation of the Extra Trees Classifier')
-    st.write("The Extremely Randomized Trees Classifier aggregates the results of multiple de-correlated decision trees collected in a “forest” to output it’s classification result. Its visualisation can be seen below")
+    st.write("The Extremely Randomized Trees Classifier aggregates the results of multiple de-correlated decision trees collected in a “forest” to output it’s classification result. Its classification visualisation can be seen below:")
     file_ = open("Images/randomforest.gif", "rb")
     contents = file_.read()
     data_url = base64.b64encode(contents).decode("utf-8")
