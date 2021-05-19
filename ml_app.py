@@ -97,7 +97,7 @@ def app2():
     st.title("Highly Correlated Features")
     st.write("From these 2 plots, we have found 4 pairs of highly correlated features:")
     st.write("1. Direct Bilirubin and Total Bilirubin")
-    st.write("2. Aspartate_Aminotransferase and Alanine_Aminotransferase")
+    st.write("2. Aspartate Aminotransferase and Alanine Aminotransferase")
     st.write("3. Total Proteins and Albumin")
     st.write("4. Albumin and Albumin and Globulin Ratio")
     st.title("Visualisation of correlated features:")
@@ -163,7 +163,7 @@ def app3():
         total_bilirubin = -1
         col_1, col_2 = st.beta_columns([5,1])
         with col_1:
-            total_bilirubin = st.slider('Total Bilirubin', 0.5, 15.0, 2.5)
+            total_bilirubin = st.slider('Total Bilirubin', 0.5, 15.0, 0.80)
         with col_2:
             bili = 0
             s_bili = st.text_input("Total Bilirubin", "")
@@ -175,7 +175,7 @@ def app3():
         direct_bilirubin = -1
         col_1, col_2 = st.beta_columns([5,1])
         with col_1:
-            direct_bilirubin = st.slider('Direct Bilirubin', 0.3, 12.5, 4.0)
+            direct_bilirubin = st.slider('Direct Bilirubin', 0.3, 12.5, 0.30)
         with col_2:
             bili = 0
             s_bili = st.text_input("Direct Bilirubin", "")
@@ -187,7 +187,7 @@ def app3():
         alkaline_phosphotase = -1
         col_1, col_2 = st.beta_columns([5,1])
         with col_1:
-            alkaline_phosphotase = st.slider('Alkaline Phosphotase', 50, 500, 150)
+            alkaline_phosphotase = st.slider('Alkaline Phosphotase', 50, 500, 111)
         with col_2:
             bili = 0
             s_bili = st.text_input("Alkaline Phosphotase", "")
@@ -199,7 +199,7 @@ def app3():
         alamine_amonotransferase = -1
         col_1, col_2 = st.beta_columns([5,1])
         with col_1:
-            alamine_aminotransferase = st.slider('Alanine Aminotransferase', 20, 250, 100)
+            alamine_aminotransferase = st.slider('Alanine Aminotransferase', 20, 250, 31)
         with col_2:
             bili = 0
             s_bili = st.text_input("Alanine Aminotransferase", "")
@@ -211,7 +211,7 @@ def app3():
         aspartate_amonotransferase = -1
         col_1, col_2 = st.beta_columns([5,1])
         with col_1:
-            aspartate_aminotransferase = st.slider('Aspartate Aminotransferase', 20, 500, 200)
+            aspartate_aminotransferase = st.slider('Aspartate Aminotransferase', 20, 500, 34)
         with col_2:
             bili = 0
             s_bili = st.text_input("Aspartate Aminotransferase", "")
@@ -223,7 +223,7 @@ def app3():
         total_proteins = -1
         col_1, col_2 = st.beta_columns([5,1])
         with col_1:
-            total_proteins = st.slider('Total Proteins', 2.0, 10.0, 5.0)
+            total_proteins = st.slider('Total Proteins', 2.0, 10.0, 6.0)
         with col_2:
             bili = 0
             s_bili = st.text_input("Total Proteins", "")
@@ -235,7 +235,7 @@ def app3():
         albumin = -1
         col_1, col_2 = st.beta_columns([5,1])
         with col_1:
-            albumin = st.slider('Albumin', 0.5, 5.0, 2.5)
+            albumin = st.slider('Albumin', 0.5, 5.0, 3.8)
         with col_2:
             bili = 0
             s_bili = st.text_input("Albumin", "")
@@ -247,7 +247,7 @@ def app3():
         albumin_and_globulin_ratio = -1
         col_1, col_2 = st.beta_columns([5,1])
         with col_1:
-            albumin_and_globulin_ratio = st.slider('Albumin and Globulin Ratio', 0.1, 3.0, 1.0)
+            albumin_and_globulin_ratio = st.slider('Albumin and Globulin Ratio', 0.1, 3.0, 1.73)
         with col_2:
             bili = 0
             s_bili = st.text_input("Albumin and Globulin Ratio", "")
