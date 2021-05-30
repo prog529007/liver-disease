@@ -290,8 +290,8 @@ def app3():
     #img = Image.open('Images/confusion matrix.png')
     #st.image(img, width = 600)
 
-    st.title("AUC Score:")
-    score = roc_auc_score(y_test, y_test_hat)
+    st.title("Accuracy Score:")
+    st.write(metrics.accuracy_score(y_test,y_test_hat))
     st.write(score)
     
     import base64
