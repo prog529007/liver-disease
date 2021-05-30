@@ -142,7 +142,7 @@ def app3():
     model.fit(X_train, y_train)
     y_train_hat = model.predict(X_train)
     y_test_hat = model.predict(X_test)
-    
+    '''
     #Hyperparameter Tuning
     from sklearn.model_selection import GridSearchCV, KFold
     #ExtraTrees
@@ -182,7 +182,7 @@ def app3():
     model = votesClass
     y_train_hat = model.predict(X_train)
     y_test_hat = model.predict(X_test)
-    
+    '''
     def get_input():
         age = -1
         col_1, col_2 = st.beta_columns([5,1])
