@@ -291,7 +291,7 @@ def app3():
     #st.image(img, width = 600)
     from sklearn import metrics
     st.title("Accuracy Score:")
-    st.write(metrics.accuracy_score(y_test,y_test_hat))
+    st.write(metrics.accuracy_score(y_test,y_test_hat)*100)
     
     import base64
     st.title('Visualisation of the Extra Trees Classifier')
