@@ -142,47 +142,7 @@ def app3():
     model.fit(X_train, y_train)
     y_train_hat = model.predict(X_train)
     y_test_hat = model.predict(X_test)
-    '''
-    #Hyperparameter Tuning
-    from sklearn.model_selection import GridSearchCV, KFold
-    #ExtraTrees
-    parameters = {
-        'n_estimators': [100, 200, 500],
-        'criterion': ['gini', 'entropy'],
-        'min_samples_split': [1,2,4,5],
-        'min_samples_leaf': [1,2,4,5],
-        'max_leaf_nodes': [4,10,20,50,None]
-    }
-    grid_search = GridSearchCV(ExtraTreesClassifier(n_jobs=-1), parameters, n_jobs=-1, cv=KFold(n_splits=3), scoring='roc_auc')
-    grid_search.fit(X_train, y_train)
-    #RandomForest
-    params = {
-        'n_estimators': [100, 200, 500],
-        'criterion': ['gini', 'entropy'],
-        'min_samples_split': [1,2,4,5],
-        'min_samples_leaf': [1,2,4,5],
-        'max_leaf_nodes': [4,10,20,50,None]
-    }
-    gs1 = GridSearchCV(RandomForestClassifier(n_jobs=-1), params, n_jobs=-1, cv=KFold(n_splits=3), scoring='roc_auc')
-    gs1.fit(X_train, y_train)
     
-    #Voting
-    from sklearn.model_selection import cross_validate
-    from sklearn.ensemble import VotingClassifier
-
-    votes = [
-        ('rf', gs.best_estimator_),
-        ('xt', gs1.best_estimator_)
-    ]
-
-    vc = VotingClassifier(estimators=votes, voting='soft', n_jobs=-1)
-    votesClass_cross_val = cross_validate(vc, X_train, y_train, cv=KFold(3, random_state=123))
-    vc.fit(X_train, y_train)
-
-    model = votesClass
-    y_train_hat = model.predict(X_train)
-    y_test_hat = model.predict(X_test)
-    '''
     def get_input():
         age = -1
         col_1, col_2 = st.beta_columns([5,1])
