@@ -289,9 +289,9 @@ def app3():
     #st.pyplot()
     #img = Image.open('Images/confusion matrix.png')
     #st.image(img, width = 600)
-
+    from sklearn import metrics
     st.title("Accuracy Score:")
-    st.write(sklearn.metrics.accuracy_score(y_test,y_test_hat))
+    st.write(metrics.accuracy_score(y_test,y_test_hat))
     
     import base64
     st.title('Visualisation of the Extra Trees Classifier')
