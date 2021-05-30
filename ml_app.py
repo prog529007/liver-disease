@@ -292,7 +292,6 @@ def app3():
 
     st.title("Accuracy Score:")
     st.write(metrics.accuracy_score(y_test,y_test_hat))
-    st.write(score)
     
     import base64
     st.title('Visualisation of the Extra Trees Classifier')
