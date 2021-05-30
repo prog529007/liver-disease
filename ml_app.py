@@ -171,8 +171,8 @@ def app3():
     from sklearn.ensemble import VotingClassifier
 
     votes = [
-        ('rf', gs1.best_estimator_),
-        ('xt', gs3.best_estimator_)
+        ('rf', gs.best_estimator_),
+        ('xt', gs1.best_estimator_)
     ]
 
     vc = VotingClassifier(estimators=votes, voting='soft', n_jobs=-1)
