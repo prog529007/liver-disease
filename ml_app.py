@@ -283,16 +283,16 @@ def app3():
     else:
         st.write("You do not have Liver Disease.")
     
-    st.title("Confusion Matrix")
-    cm=confusion_matrix(y_test, y_test_hat)
-    st.write(cm)
+    #st.title("Confusion Matrix")
+    #cm=confusion_matrix(y_test, y_test_hat)
+    #st.write(cm)
     #plot_confusion_matrix(model, y_test, y_test_hat)
     #st.pyplot()
     #img = Image.open('Images/confusion matrix.png')
     #st.image(img, width = 600)
-    from sklearn import metrics
-    st.title("Accuracy Score:")
-    st.write(metrics.accuracy_score(y_test,y_test_hat)*100)
+    #from sklearn import metrics
+    #st.title("Accuracy Score:")
+    #st.write(metrics.accuracy_score(y_test,y_test_hat)*100)
     
     import base64
     st.title('Visualisation of the Extra Trees Classifier')
