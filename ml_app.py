@@ -136,7 +136,7 @@ def app3():
     X_train, X_test, y_train, y_test = train_test_split(liver.drop('dataset', axis=1), liver['dataset'], test_size=0.25, random_state=123)
 
     from sklearn.metrics import classification_report, confusion_matrix, roc_auc_score
-    from sklearn.ensemble import ExtraTreesClassifier
+    from sklearn.ensemble import ExtraTreesClassifier  
 
     model = ExtraTreesClassifier(random_state=123)
     model.fit(X_train, y_train)
@@ -262,8 +262,8 @@ def app3():
         features = pd.DataFrame(user_data, index=[0])
         return features
     st.title('User Details:')
-    st.write("Please enter the readings for the following values by moving the slider. In case your value does not fit in the given range, please enter it in the text box provided next to the slider. ")
-    st.write("After entering your readings, please scroll down to the \"Result\" section to check whether or not you have a healthy Liver.")
+    st.write("Please enter the readings for the following values by moving the slider. In case the value does not fit in the given range, please enter it in the text box provided next to the slider. ")
+    st.write("After entering the readings, please scroll down to the \"Result\" section to check whether or not the person has a healthy Liver.")
     user_input = get_input()
     user_input.columns = user_input.columns.map(str.lower) 
     #print(user_input)
@@ -279,9 +279,9 @@ def app3():
     prediction = model.predict(user_input)
     st.title("Result:")
     if (prediction==1):
-        st.write("You have Liver Disease.")
+        st.write("The person has Liver Disease.")
     else:
-        st.write("You do not have Liver Disease.")
+        st.write("The person does not have Liver Disease.")
     
     #st.title("Confusion Matrix")
     #cm=confusion_matrix(y_test, y_test_hat)
@@ -306,15 +306,15 @@ def app3():
         unsafe_allow_html=True,
     )
 
-def app5():
-    st.title("CONCLUSIONS")
-    st.write("1. By using an appropriate methodology, standard Liver Function Tests (LFTs) can be used to predict whether a person has a healthy or a diseased liver with 85-90 percent accuracy.")
-    st.write("2. The Extra Trees Classifier is an effective machine learning model for analysis of Medical Datasets such as Liver Function Tests.")
+#def app5():
+    #st.title("FUTURE PROSPECTS")
+    #st.write("1. We can use convolutional neural networks to develop a classification model to predict the exact Liver Disease a patient has ")
+    #st.write("2. The Extra Trees Classifier is an effective machine learning model for analysis of Medical Datasets such as Liver Function Tests.")
 
 st.sidebar.title("PAGE NAVIGATION")
 app.add_app("Home Page", app0)
 app.add_app("The Dataset", app1)
 app.add_app("Exploratory Data Analysis", app2)
 app.add_app("Liver Disease Prediction", app3)
-app.add_app("Conclusions", app5)
+#app.add_app("Future Prospects", app5)
 app.run()
