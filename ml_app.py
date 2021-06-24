@@ -28,7 +28,7 @@ def app0():
     st.write("Presence of Liver Disease has a significant impact on the health of a person as the liver is responsible for over 500 functions in the body and is often referred to as the metabolic factory of our body.")
     st.write("It is therefore of immense use to have an app which is able to detect whether or not a person has a healthy liver. Furthermore, if there is an app which can predict the same without the need of a clinician at the initial assessment, it will be of great utility.")
     img = Image.open('Images/liver image 2.jpg')
-    st.image(img, caption='A healthy Liver', width = 450)
+    st.image(img, caption='A healthy Liver      credit: https://www.narayanahealth.org/blog/wp-content/uploads/2015/11/shutterstock_300027005-3-1170x1033.jpg', width = 450)
     st.title("LIVER DISEASES")
     st.markdown('<p class="big-font">TYPES OF LIVER DISEASES:</p>', unsafe_allow_html=True)
     st.write("An unhealthy liver can be the sequel of several liver diseases stemming from various causes. Some of the common liver diseases are:")
@@ -49,7 +49,7 @@ def app0():
         st.image('Images/Screen Shot 2021-05-16 at 11.11.48 PM.png', use_column_width=True)
     st.title("OBJECTIVES")
     st.write("1. To gain an understanding of Liver Diseases and the main factors causing them.\n2. To analyse the data and find out which features are most important in detecting Liver Disease.\n3. To develop a Liver Disease Prediction machine learning model which is able to perform at a relatively high accuracy (85-90%).")
-
+    st.title("TARGET USER")
 
 def app1():
     st.title("THE DATASET")
