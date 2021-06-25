@@ -282,7 +282,7 @@ def app3():
         st.write("The person has Liver Disease.")
     else:
         st.write("The person does not have Liver Disease.")
-    st.write("Accuracy: ", metrics.accuracy_score(y_test,y_test_hat)*100)
+    st.write("Accuracy: "+metrics.accuracy_score(y_test,y_test_hat)*100)
     
     #st.title("Confusion Matrix")
     #cm=confusion_matrix(y_test, y_test_hat)
