@@ -282,6 +282,7 @@ def app3():
         st.write("The person has Liver Disease.")
     else:
         st.write("The person does not have Liver Disease.")
+    from sklearn import metrics
     acc_s = metrics.accuracy_score(y_test,y_test_hat)*100
     st.write('Accuracy: ', acc_s)
     
