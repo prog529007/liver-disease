@@ -188,7 +188,7 @@ def app3():
         alkaline_phosphotase = -1
         col_1, col_2 = st.beta_columns([5,1])
         with col_1:
-            alkaline_phosphotase = st.slider('Alkaline Phosphotase', 50, 500, 111)
+            alkaline_phosphotase = st.slider('Alkaline Phosphotase', 50, 500, 100)
         with col_2:
             bili = 0
             s_bili = st.text_input("Alkaline Phosphotase", "")
@@ -200,7 +200,7 @@ def app3():
         alamine_amonotransferase = -1
         col_1, col_2 = st.beta_columns([5,1])
         with col_1:
-            alamine_aminotransferase = st.slider('Alanine Aminotransferase', 20, 250, 31)
+            alamine_aminotransferase = st.slider('Alanine Aminotransferase', 20, 250, 24)
         with col_2:
             bili = 0
             s_bili = st.text_input("Alanine Aminotransferase", "")
@@ -212,7 +212,7 @@ def app3():
         aspartate_amonotransferase = -1
         col_1, col_2 = st.beta_columns([5,1])
         with col_1:
-            aspartate_aminotransferase = st.slider('Aspartate Aminotransferase', 20, 500, 34)
+            aspartate_aminotransferase = st.slider('Aspartate Aminotransferase', 20, 500, 25)
         with col_2:
             bili = 0
             s_bili = st.text_input("Aspartate Aminotransferase", "")
