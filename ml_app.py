@@ -49,7 +49,6 @@ def app0():
         st.image('Images/Screen Shot 2021-05-16 at 11.11.48 PM.png', use_column_width=True)
     st.title("OBJECTIVES")
     st.write("1. To gain an understanding of Liver Diseases and the main factors causing them.\n2. To analyse the data and find out which features are most important in detecting Liver Disease.\n3. To develop a Liver Disease Prediction machine learning model which is able to perform at a relatively high accuracy (85-90%).")
-    st.title("TARGET USER")
 
 def app1():
     st.title("THE DATASET")
