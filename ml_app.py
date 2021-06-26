@@ -260,14 +260,15 @@ def app3():
     import base64
     st.title('Visualisation of the Extra Trees Classifier')
     st.write("The Extremely Randomized Trees Classifier aggregates the results of multiple de-correlated decision trees collected in a “forest” to output it’s classification result. A major difference between ExtraTrees ad Random Forest is that a random forest chooses the optimal split at each node while an Extra Trees classifier chooses it randomly, thereby making it significantly faster for very comparable performance. The visualisation of a random forest can be seen below:")
-    file_ = open("Images/randomforest.gif", "rb")
+    file_ = open("Images/Random Forest 03.gif", "rb")
     contents = file_.read()
     data_url = base64.b64encode(contents).decode("utf-8")
     file_.close()
     st.markdown(
-        f'<img src="data:image/gif;base64,{data_url}" alt="Credit: The Tensorflow Blog">',
+        f'<img src="data:image/gif;base64,{data_url}" alt="visualisation">',
         unsafe_allow_html=True,
     )
+    st.write("Credit: The Tensorflow Blog")
 
 #def app5():
     #st.title("FUTURE PROSPECTS")
