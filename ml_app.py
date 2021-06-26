@@ -259,7 +259,7 @@ def app3():
     
     import base64
     st.title('Visualisation of the Extra Trees Classifier')
-    st.write("The Extremely Randomized Trees Classifier aggregates the results of multiple de-correlated decision trees collected in a “forest” to output it’s classification result. A major difference between ExtraTrees ad Random Forest is that a random forest chooses the optimal split at each node while an Extra Trees classifier chooses it randomly, thereby making it significantly faster for very comparable performance. The visualisation of a random forest can be seen below:")
+    st.write("The Extremely Randomized Trees Classifier aggregates the results of multiple de-correlated decision trees collected in a “forest” to output it’s classification result. A major difference between ExtraTrees and Random Forest is that a random forest chooses the optimal split at each node while an Extra Trees classifier chooses it randomly, thereby making it significantly faster for equally good performance. The visualisation of a random forest can be seen below:")
     file_ = open("Images/Random Forest 03.gif", "rb")
     st.image("https://1.bp.blogspot.com/-Ax59WK4DE8w/YK6o9bt_9jI/AAAAAAAAEQA/9KbBf9cdL6kOFkJnU39aUn4m8ydThPenwCLcBGAsYHQ/s0/Random%2BForest%2B03.gif", width=900)
     st.write("Credit: The Tensorflow Blog")
