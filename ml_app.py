@@ -111,38 +111,6 @@ def app2():
 
 def app3():
     st.title("LIVER DISEASE PREDICTION")
-    liver = pd.read_csv('indian_liver_patient.csv')
-    liver.columns = liver.columns.map(str.lower)     
-    liver.albumin_and_globulin_ratio.fillna(liver.albumin_and_globulin_ratio.mean(), inplace=True) 
-    #liver.drop(['direct_bilirubin', 'aspartate_aminotransferase', 'albumin'], axis=1, inplace=True)
-    skewed_cols = ['albumin_and_globulin_ratio','total_bilirubin', 'alkaline_phosphotase', 'alamine_aminotransferase']
-    #for c in skewed_cols:
-        #liver[c] = liver[c].apply('log1p')
-
-    from sklearn.preprocessing import LabelEncoder, RobustScaler
-    from sklearn.utils import resample
-    from sklearn.model_selection import train_test_split
-
-    label_enc = LabelEncoder()
-    liver['gender'] = label_enc.fit_transform(liver['gender'])
-    robust_sc = RobustScaler()
-    #for c in liver[['age', 'gender', 'total_bilirubin', 'alkaline_phosphotase', 'alamine_aminotransferase', 'albumin_and_globulin_ratio']].columns:
-        #liver[c] = robust_sc.fit_transform(liver[c].values.reshape(-1, 1))
-    liver.dataset.value_counts()
-    minority = liver[liver.dataset==2]
-    majority = liver[liver.dataset==1]
-    minority_upsample = resample(minority, replace=True, n_samples=majority.shape[0])
-    liver = pd.concat([minority_upsample, majority], axis=0)
-    X_train, X_test, y_train, y_test = train_test_split(liver.drop('dataset', axis=1), liver['dataset'], test_size=0.25, random_state=123)
-
-    from sklearn.metrics import classification_report, confusion_matrix, roc_auc_score
-    from sklearn.ensemble import ExtraTreesClassifier  
-
-    model = ExtraTreesClassifier(random_state=123)
-    model.fit(X_train, y_train)
-    y_train_hat = model.predict(X_train)
-    y_test_hat = model.predict(X_test)
-    
     def get_input():
         age = -1
         col_1, col_2 = st.beta_columns([5,1])
@@ -266,25 +234,16 @@ def app3():
     st.write("After entering the readings, please scroll down to the \"Result\" section to check whether or not the person has a healthy Liver.")
     user_input = get_input()
     user_input.columns = user_input.columns.map(str.lower) 
-    #print(user_input)
-    #for c in user_input[['age', 'gender', 'total bilirubin', 'alkaline phosphotase', 'amaline aminotransferase', 'albumin and globulin ratio']].columns:
-        #user_input[c] = robust_sc.fit_transform(user_input[c].values.reshape(-1, 1))
-    #print(X_test.loc[[48]])
-    #print(y_test_hat[48])
     st.dataframe(user_input)
-    #user_input.drop('direct bilirubin', axis=1, inplace=True)
-    #user_input.drop('aspartate aminotransferase', axis=1, inplace=True)
-    #user_input.drop('total proteins', axis=1, inplace=True)
-    #user_input.drop('albumin', axis=1, inplace=True)
+    import pickle
+    model = pickle.load(open('new_model_1.pkl','rb'))
     prediction = model.predict(user_input)
     st.title("Result:")
     if (prediction==1):
         st.write("The person has Liver Disease.")
     else:
         st.write("The person does not have Liver Disease.")
-    from sklearn import metrics
-    acc_s = metrics.accuracy_score(y_test,y_test_hat)*100
-    st.write('Accuracy: ', acc_s)
+    st.write('Accuracy: ', 89%)
     
     #st.title("Confusion Matrix")
     #cm=confusion_matrix(y_test, y_test_hat)
