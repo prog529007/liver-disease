@@ -243,7 +243,7 @@ def app3():
         st.write("The person has Liver Disease.")
     else:
         st.write("The person does not have Liver Disease.")
-    acc_s = 88.9
+    acc_s = 88.899
     st.write('Accuracy: ', acc_s)
     
     #st.title("Confusion Matrix")
@@ -259,13 +259,13 @@ def app3():
     
     import base64
     st.title('Visualisation of the Extra Trees Classifier')
-    st.write("The Extremely Randomized Trees Classifier aggregates the results of multiple de-correlated decision trees collected in a “forest” to output it’s classification result. Its classification visualisation can be seen below:")
+    st.write("The Extremely Randomized Trees Classifier aggregates the results of multiple de-correlated decision trees collected in a “forest” to output it’s classification result. A major difference between ExtraTrees ad Random Forest is that a random forest chooses the optimal split at each node while an Extra Trees classifier chooses it randomly, thereby making it significantly faster for very comparable performance. The visualisation of a random forest can be seen below:")
     file_ = open("Images/randomforest.gif", "rb")
     contents = file_.read()
     data_url = base64.b64encode(contents).decode("utf-8")
     file_.close()
     st.markdown(
-        f'<img src="data:image/gif;base64,{data_url}" alt="visualisation">',
+        f'<img src="data:image/gif;base64,{data_url}" alt="Credit: The Tensorflow Blog">',
         unsafe_allow_html=True,
     )
 
