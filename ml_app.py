@@ -21,7 +21,7 @@ def app0():
     }
     </style>
     """, unsafe_allow_html=True)
-    st.title("LIVER DISEASE DETECTION")
+    st.title("LIVER HEALTH DETECTION")
     st.write("By Abhishek Saigal, Class 12, The Shri Ram School, Aravali")
     st.title("INTRODUCTION")
     st.write("A healthy liver is a basic requirement for the overall health and wellness of an individual.")
