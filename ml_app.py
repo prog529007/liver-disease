@@ -52,7 +52,7 @@ def app0():
 
 def app1():
     st.title("THE DATASET")
-    st.write("The Indian Liver Patient Records Dataset has patient records from the North East and Andhra Pradesh, India.")
+    st.write("The Indian Liver Patient Records Dataset has patient records from the North East of Andhra Pradesh, India.")
     st.write("This dataset consists of 583 total records, with 416 liver patient records and 167 non-liver patient records.")
     st.write("The features present in this dataset were:")
     st.write("1. Age of the Patient\n2. Gender of the Patient\n3. Total Bilirubin\n4. Direct Bilirubin\n5. Alkaline Phosphotase\n6. Alanine Aminotransferase\n7. Aspartate Aminotransferase\n8. Total Proteins\n9. Albumin\n10. Albumin and Globulin Ratio")
