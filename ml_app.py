@@ -22,7 +22,7 @@ def app0():
     </style>
     """, unsafe_allow_html=True)
     st.title("LIVER HEALTH DETECTION")
-    st.write("By Abhishek Saigal, Class 12, The Shri Ram School, Aravali")
+    st.write("By Abhishek Saigal")
     st.title("INTRODUCTION")
     st.write("A healthy liver is a basic requirement for the overall health and wellness of an individual.")
     st.write("Presence of Liver Disease has a significant impact on the health of a person as the liver is responsible for over 500 functions in the body and is often referred to as the metabolic factory of our body.")
